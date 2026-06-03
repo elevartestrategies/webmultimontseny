@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "serveis": "Servicios",
+    "projectes": "Proyectos",
+    "nosaltres": "Nosotros",
+    "testimonis": "Testimonios",
+    "contacte": "Contacto",
+    "pressupost": "Presupuesto"
+  },
+  "hero": {
+    "location": "SANT CELONI · BARCELONA",
+    "title1": "CONSTRUIMOS",
+    "title2": "TU ESPACIO",
+    "subtitle": "Reformas · Construcción · Piscinas · Vallès Oriental",
+    "cta_primary": "Pedir presupuesto",
+    "cta_secondary": "Ver proyectos"
+  },
+  "serveis": {
+    "eyebrow": "Lo que hacemos",
+    "title": "Nuestros",
+    "title_accent": "servicios",
+    "subtitle": "Desde pequeñas reformas hasta grandes construcciones, somos tu equipo de confianza en el Vallès Oriental.",
+    "more": "Saber más",
+    "items": [
+      {
+        "title": "Reformas Integrales",
+        "desc": "Transformamos completamente tu espacio, desde la planificación hasta los acabados finales."
+      },
+      {
+        "title": "Construcción",
+        "desc": "Construimos desde cero con calidad y precisión. Estructuras, obra nueva y ampliaciones."
+      },
+      {
+        "title": "Piscinas",
+        "desc": "Diseño y construcción de piscinas a medida. Mantenimiento y rehabilitación de piscinas existentes."
+      },
+      {
+        "title": "Instalaciones",
+        "desc": "Eléctrica, fontanería, climatización y gas. Instalación y mantenimiento para cualquier proyecto."
+      },
+      {
+        "title": "Jardinería y Exteriores",
+        "desc": "Diseño y mantenimiento de jardines, terrazas y espacios exteriores. Riegos automáticos y pavimentos."
+      },
+      {
+        "title": "Pintura y Acabados",
+        "desc": "Pintura interior y exterior, enyesados, alicatados y todos los acabados de tu hogar."
+      }
+    ]
+  },
+  "stats": {
+    "eyebrow": "Por qué nosotros",
+    "title": "Experiencia que",
+    "title_accent": "habla",
+    "subtitle": "Más de una década construyendo confianza en Sant Celoni y toda la comarca del Vallès Oriental.",
+    "items": [
+      { "value": 10, "suffix": "+", "label": "Años de experiencia" },
+      { "value": 200, "suffix": "+", "label": "Proyectos realizados" },
+      { "value": 4.4, "suffix": "★", "label": "Valoración Google", "sublabel": "68 reseñas verificadas" },
+      { "value": 1, "suffix": "", "label": "Interlocutor para todo" }
+    ],
+    "features": [
+      {
+        "title": "Un solo equipo, todo el proyecto",
+        "desc": "Gestión integral sin intermediarios: arquitectura, obra, instalaciones y acabados."
+      },
+      {
+        "title": "Presupuesto sin compromiso",
+        "desc": "Estudio gratuito y personalizado de tu proyecto. Transparencia total en costes."
+      },
+      {
+        "title": "Garantía y mantenimiento",
+        "desc": "Todos nuestros trabajos incluyen garantía. Servicio post-obra disponible."
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Nuestro trabajo",
+    "title": "Proyectos",
+    "title_accent": "recientes",
+    "subtitle": "Cada proyecto es único. Aquí tienes una muestra de lo que hemos hecho para nuestros clientes.",
+    "categories": {
+      "tots": "Todos",
+      "reformes": "Reformas",
+      "piscines": "Piscinas",
+      "construccio": "Construcción",
+      "installacions": "Instalaciones"
+    },
+    "note": "Las fotos reales del cliente se incorporarán próximamente",
+    "close": "Cerrar"
+  },
+  "testimonis": {
+    "eyebrow": "Clientes satisfechos",
+    "title": "Lo que dicen",
+    "title_accent": "de ellos",
+    "google_text": "4.4 ★ en Google Maps · Multimontseny Serveis i Manteniments S.L.",
+    "items": [
+      {
+        "name": "Maria G.",
+        "location": "Sant Celoni",
+        "rating": 5,
+        "text": "Hicimos una reforma integral del baño y quedó perfecto. El trato fue muy cercano y profesional. Totalmente recomendable.",
+        "date": "Noviembre 2024"
+      },
+      {
+        "name": "Jordi P.",
+        "location": "Gualba",
+        "rating": 5,
+        "text": "Nos construyeron la piscina y el jardín exterior. El resultado superó las expectativas. Puntuales, limpios y muy buen trabajo.",
+        "date": "Septiembre 2024"
+      },
+      {
+        "name": "Anna M.",
+        "location": "Vallgorguina",
+        "rating": 4,
+        "text": "Reforma de cocina y salón en 3 semanas como habían dicho. Precios competitivos y muy buena atención. Repetiremos sin duda.",
+        "date": "Julio 2024"
+      },
+      {
+        "name": "Pere R.",
+        "location": "Santa Maria de Palautordera",
+        "rating": 5,
+        "text": "Construcción de un garaje y reforma de la fachada. Muy profesionales, cumplieron plazos y presupuesto. Excelente.",
+        "date": "Abril 2024"
+      }
+    ]
+  },
+  "zona": {
+    "eyebrow": "Área de trabajo",
+    "title": "Dónde",
+    "title_accent": "trabajamos",
+    "description": "Trabajamos en <gold>Sant Celoni</gold>, Gualba, Vallgorguina, Santa Maria de Palautordera, Montseny, Campins, Fogars de Montclús y <gold>toda la comarca del Vallès Oriental</gold>. Empresa de reformas, construcción y piscinas de referencia en la zona del Montseny.",
+    "areas": ["Sant Celoni", "Gualba", "Vallgorguina", "Santa Maria de Palautordera", "Montseny", "Campins", "Fogars de Montclús", "Cardedeu", "La Roca del Vallès", "Vallès Oriental"],
+    "seo_text": "empresa de reformas sant celoni · reformas integrales vallès oriental · construcción sant celoni · piscinas sant celoni · instalador eléctrico sant celoni · presupuesto reformas gratis",
+    "pin_city": "Sant Celoni",
+    "pin_address": "Plaça del Bestiar, 27",
+    "pin_postal": "08470 · Barcelona"
+  },
+  "contacte": {
+    "eyebrow": "Hablemos de tu proyecto",
+    "title": "Solicita tu",
+    "title_accent": "presupuesto gratuito",
+    "subtitle": "Contáctanos hoy y te atendemos en menos de 24 horas.",
+    "form": {
+      "name_label": "Nombre y apellidos",
+      "name_placeholder": "Joan García",
+      "phone_label": "Teléfono (WhatsApp)",
+      "phone_placeholder": "6XX XXX XXX",
+      "service_label": "Tipo de servicio",
+      "service_placeholder": "Selecciona un servicio...",
+      "desc_label": "Descripción breve del proyecto",
+      "desc_placeholder": "Describe brevemente lo que necesitas...",
+      "location_label": "Localidad",
+      "location_placeholder": "Sant Celoni",
+      "submit": "Solicitar presupuesto gratuito",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactamos en menos de 24 horas.",
+      "error": "Error al enviar. Llámanos al"
+    },
+    "services": [
+      { "value": "reforma", "label": "Reforma integral" },
+      { "value": "construccio", "label": "Construcción" },
+      { "value": "piscina", "label": "Piscina" },
+      { "value": "installacio", "label": "Instalación (eléctrica, fontanería, clima)" },
+      { "value": "jardineria", "label": "Jardinería y exteriores" },
+      { "value": "pintura", "label": "Pintura y acabados" },
+      { "value": "altre", "label": "Otro" }
+    ],
+    "privacy": "Tus datos no serán compartidos con terceros.",
+    "alt_contacts": [
+      { "label": "Teléfono", "value": "930 166 330", "href": "tel:+34930166330", "icon": "phone" },
+      { "label": "Móvil / WhatsApp", "value": "640 746 129", "href": "https://wa.me/34640746129", "icon": "chat" },
+      { "label": "Email", "value": "info@multimontseny.com", "href": "mailto:info@multimontseny.com", "icon": "mail" }
+    ]
+  },
+  "footer": {
+    "tagline": "Reformas, construcción y piscinas en Sant Celoni y toda la comarca del Vallès Oriental. Más de 10 años de confianza.",
+    "services_title": "Servicios",
+    "contact_title": "Contacto",
+    "hours_title": "Horario",
+    "services": ["Reformas Integrales", "Construcción", "Piscinas", "Instalaciones", "Jardinería", "Pintura y Acabados"],
+    "address_label": "Dirección",
+    "phones_label": "Teléfonos",
+    "hours": [
+      { "days": "Lu – Ju", "time": "09:00 – 20:00" },
+      { "days": "Viernes", "time": "09:00 – 19:00" },
+      { "days": "Fin de semana", "time": "Cerrado" }
+    ],
+    "copyright": "© {year} Multimontseny Serveis i Manteniments S.L. Todos los derechos reservados.",
+    "legal": ["Aviso legal", "Privacidad", "Cookies"],
+    "wa_tooltip": "Escríbenos por WhatsApp"
+  }
+}
