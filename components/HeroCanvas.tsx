@@ -12,6 +12,7 @@ export default function HeroCanvas() {
     let renderer: any, scene: any, camera: any
     let particleMesh: any, phases: Float32Array
     let mouseX = 0, mouseY = 0
+    let scrollProgress = 0
 
     const init = async () => {
       const THREE = await import('three')
@@ -30,7 +31,7 @@ export default function HeroCanvas() {
       camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000)
       camera.position.z = 5
 
-      // Particles (120)
+      // Particles
       const count = isMobile ? 60 : 120
       const pos = new Float32Array(count * 3)
       phases = new Float32Array(count)
@@ -51,7 +52,8 @@ export default function HeroCanvas() {
       }))
       scene.add(particleMesh)
 
-      // Static wireframe boxes — architectural sketches
+      // Wireframe boxes — architectural sketches
+      const wireBoxes: any[] = []
       const boxConfigs = [
         { size: [2.4, 2.4, 2.4] as [number,number,number], pos: [-5, 1.5, -5] as [number,number,number] },
         { size: [1.2, 3.5, 1.2] as [number,number,number], pos: [5,  -1,  -6] as [number,number,number] },
@@ -59,13 +61,18 @@ export default function HeroCanvas() {
         { size: [1, 1, 1]       as [number,number,number], pos: [-2.5, -2.5, -2] as [number,number,number] },
       ]
       const wireMat = new THREE.LineBasicMaterial({ color: 0xe8a020, transparent: true, opacity: 0.12 })
-      boxConfigs.forEach(({ size, pos: p }) => {
-        const mesh = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(...size)), wireMat)
+      boxConfigs.forEach(({ size, pos: p }, i) => {
+        const mesh = new THREE.LineSegments(
+          new THREE.EdgesGeometry(new THREE.BoxGeometry(...size)),
+          wireMat,
+        )
         mesh.position.set(...p)
+        mesh.rotation.y = i * 0.5
         scene.add(mesh)
+        wireBoxes.push(mesh)
       })
 
-      // Subtle horizontal grid plane
+      // Subtle grid
       const gridHelper = new THREE.GridHelper(30, 20, 0xe8a020, 0xe8a020)
       ;(gridHelper.material as any).opacity = 0.04
       ;(gridHelper.material as any).transparent = true
@@ -76,15 +83,18 @@ export default function HeroCanvas() {
         mouseX = (e.clientX / window.innerWidth - 0.5) * 2
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2
       }
-      window.addEventListener('mousemove', onMouseMove)
-
+      const onScroll = () => {
+        scrollProgress = Math.min(1, window.scrollY / window.innerHeight)
+      }
       const onResize = () => {
-        const w = window.innerWidth
-        const h = window.innerHeight
+        const w = window.innerWidth, h = window.innerHeight
         camera.aspect = w / h
         camera.updateProjectionMatrix()
         renderer.setSize(w, h)
       }
+
+      window.addEventListener('mousemove', onMouseMove)
+      window.addEventListener('scroll', onScroll, { passive: true })
       window.addEventListener('resize', onResize)
 
       let t = 0
@@ -92,11 +102,22 @@ export default function HeroCanvas() {
         animationId = requestAnimationFrame(animate)
         t += 0.007
 
+        // Particle float
         const positions = particleMesh.geometry.attributes.position.array as Float32Array
         for (let i = 0; i < count; i++) {
           positions[i * 3 + 1] += Math.sin(t + phases[i]) * 0.0015
         }
         particleMesh.geometry.attributes.position.needsUpdate = true
+
+        // Wireframe boxes: continuous rotation + scroll-driven X tilt
+        wireBoxes.forEach((box, i) => {
+          box.rotation.y += 0.003 + i * 0.001
+          box.rotation.x = scrollProgress * 0.25 + Math.sin(t * 0.4 + i) * 0.04
+        })
+
+        // Camera: scroll-driven zoom in + mouse parallax
+        const targetZ = 5 - scrollProgress * 1.8
+        camera.position.z += (targetZ - camera.position.z) * 0.05
 
         camera.position.x += (mouseX * 0.25 - camera.position.x) * 0.025
         camera.position.y += (-mouseY * 0.18 - camera.position.y) * 0.025
@@ -105,8 +126,10 @@ export default function HeroCanvas() {
         renderer.render(scene, camera)
       }
       animate()
+
       ;(mountRef.current as any)._cleanup = () => {
         window.removeEventListener('mousemove', onMouseMove)
+        window.removeEventListener('scroll', onScroll)
         window.removeEventListener('resize', onResize)
       }
     }
