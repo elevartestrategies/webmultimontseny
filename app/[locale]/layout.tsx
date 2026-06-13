@@ -13,12 +13,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+  const icons = {
+    icon: '/logo.jpg',
+    apple: '/logo.jpg',
+  }
+
   if (locale === 'es') {
     return {
       title: 'Multimontseny | Reformas, Construcción y Piscinas en Sant Celoni',
       description:
         'Empresa de reformas integrales, construcción y piscinas en el Vallès Oriental. Más de 10 años de experiencia. Presupuesto gratuito. Tel: 930 166 330',
       keywords: ['reformas sant celoni', 'construcción sant celoni', 'piscinas sant celoni', 'empresa reformas vallès oriental'],
+      icons,
       alternates: {
         canonical: 'https://multimontseny.es/es',
         languages: { ca: 'https://multimontseny.es/ca' },
@@ -36,6 +42,7 @@ export async function generateMetadata({
     description:
       "Empresa de reformes integrals, construcció i piscines al Vallès Oriental. Més de 10 anys d'experiència. Pressupost gratuït. Tel: 930 166 330",
     keywords: ['reformes sant celoni', 'construcció sant celoni', 'piscines sant celoni', 'empresa reformes vallès oriental'],
+    icons,
     alternates: {
       canonical: 'https://multimontseny.es/ca',
       languages: { es: 'https://multimontseny.es/es' },

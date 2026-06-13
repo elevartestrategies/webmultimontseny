@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
 
@@ -73,20 +74,25 @@ export default function Navbar() {
         >
           <div
             style={{
-              width: '34px',
-              height: '34px',
-              background: 'linear-gradient(135deg, var(--gold-dark), var(--gold-primary))',
-              borderRadius: 'var(--radius-sm)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontFamily: 'var(--font-display)',
-              fontSize: '18px',
-              fontWeight: 700,
-              color: '#1a1a1a',
+              width: '36px',
+              height: '36px',
+              borderRadius: '10px',
+              overflow: 'hidden',
+              flexShrink: 0,
             }}
           >
-            M
+            <Image
+              src="/logo.jpg"
+              alt="Multimontseny"
+              width={36}
+              height={36}
+              style={{
+                objectFit: 'cover',
+                objectPosition: '50% 30%',
+                display: 'block',
+              }}
+              priority
+            />
           </div>
           <span
             className="font-display"
